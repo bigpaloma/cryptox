@@ -18,16 +18,16 @@
                 class="duration-300 hover:text-indigo-400 cursor-pointer"
                 >Kryptow&auml;hrungen</a
             >
-            <a
+            <!-- <a
                 href="/"
                 class="duration-300 hover:text-indigo-400 cursor-pointer"
                 >Portfolio</a
-            >
-            <a
+            > -->
+            <!-- <a
                 href="/watchlist"
                 class="duration-300 hover:text-indigo-400 cursor-pointer"
                 >Watchlist</a
-            >
+            > -->
             <a
                 href="/about"
                 class="duration-300 hover:text-indigo-400 cursor-pointer"

@@ -69,15 +69,12 @@
                     <th class="text-right"
                         ><span class="cursor-pointer">7d %</span></th
                     >
-                    <th
+                    <th class="text-right"
                         ><span class="cursor-pointer">Marktkapitalisierung</span
                         ></th
                     >
                     <th class="text-right"
                         ><span class="cursor-pointer">Volumen</span></th
-                    >
-                    <th class="text-right"
-                        ><span class="cursor-pointer">Letzte 7 Tage</span></th
                     >
                 </tr>
             </thead>
@@ -128,7 +125,6 @@
                             ).slice(0, -3)}
                             <span class="uppercase">{coin.symbol}</span></td
                         >
-                        <td class="text-right">CHF {coin.market_cap_rank}</td>
                     </tr>
                 {/each}
             </tbody>
