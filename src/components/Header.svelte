@@ -1,5 +1,12 @@
 <script>
+    // @ts-nocheck
     import { LightSwitch } from "@skeletonlabs/skeleton";
+    import { signIn, signOut } from "@auth/sveltekit/client";
+    import { page } from "$app/stores";
+
+    const session = $page.data.session;
+
+    console.log(session);
 </script>
 
 <header class="sticky top-0 flex flex-col z-20 bg-surface-100-800-token">
@@ -33,10 +40,17 @@
                 class="duration-300 hover:text-indigo-400 cursor-pointer"
                 >&Uuml;ber uns</a
             >
+            <a
+                href="/protected"
+                class="duration-300 hover:text-indigo-400 cursor-pointer"
+                >secret</a
+            >
         </nav>
         <div class="hidden md:flex items-center gap-4 lg:gap-6">
             <p>CHF</p>
-            <a href="/login">Login</a>
+            <button on:click={session ? signOut : signIn}
+                >{session ? "Sign Out" : "Sign In"}</button
+            >
             <LightSwitch />
         </div>
     </div>

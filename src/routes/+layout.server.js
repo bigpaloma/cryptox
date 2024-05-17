@@ -2,7 +2,10 @@ import db from "$db/mongo"
 
 const dataDb = db.collection("dataset");
 
-export const load = async () => {
+export const load = async (event) => {
+    //auth.js
+    const session = await event.locals.auth()
+    //mongodb
     const cursor = await dataDb.find({})
     const prices = []
     const priceArr = []
@@ -16,6 +19,7 @@ export const load = async () => {
         priceArr.push([timestamp, price.rate_close])
     }
     return {
-        priceArr
+        priceArr,
+        session
     }
 }
